@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model SelectedGuests
+
+<h1>Etkinliğe Kayıt Olma</h1>
+<a href="/SelectedGE" class="btn btn-primary">Geri Dön</a>
+<form asp-controller="SelectedGE" asp-action="CreateGE" method="post">
+    <div class="mb-3">
+        <label asp-for="EventId" class="form-label">Etkinlik</label>
+        <select asp-for ="EventId" asp-items="ViewBag.Events" class="form-control"></select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="GuestId" class="form-label">Katılımcı</label>
+        <select asp-for="GuestId" asp-items="ViewBag.Guests" class="form-control"></select>
+        
+    </div>
+ 
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model IEnumerable<Guest>
+
+    <h3>Katılımcı Listesi:</h3>
+    <br />
+    <a href="/Guest/CreateGuest" class="btn btn-primary">Yeni Katılımcı Ekle</a>
+    
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>E-Posta</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var myGuest in Model)
+            {
+                <tr>
+                    <td>@myGuest.GuestName</td>
+                    <td>@myGuest.GuestSurname</td>
+                    <td>@myGuest.GuestMail</td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+

@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@Model IEnumerable<Event>
+
+<h3>Geçerli Etkinlikler:</h3>
+<a href="Event/CreateEvent" class="btn btn-primary">Yeni Etkinlik Ekle</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Etkinlik Adı:</th>
+            <th>Etknlik Tarihi:</th>
+            <th>Adres:</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var myEvent in Model)
+        {
+           <tr>
+                    <td>@myEvent.EventName</td>
+                    <td>@myEvent.EventDate</td>
+                    <td>@myEvent.EventLocation</td>
+                <td>
+                    <a href="" class="btn btn-sm btn-primary">Etkinlik Detayı</a>
+                </td>
+           </tr>
+        }
+    </tbody>
+</table>

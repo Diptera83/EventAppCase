@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Event
+
+
+<h2>Seçili Etkinlik Detayı:</h2><br />
+<a href="/Event/EventList" class="btn btn-primary">Geri Git</a>
+<form asp-controller="Event" asp-action="CreateEvent" method="post">
+    <div class="mb-3">
+        
+        <input asp-for="EventId" type="hidden"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="EventDate" class="form-label">Etkinlik Tarihi:</label>
+        <input asp-for="EventDate" disabled="true" type="date" class="form-label"  />
+    </div>
+    <div class="mb-3">
+        <label asp-for="EventName" class="form-label">Etkinlik Adı:</label>
+        <input asp-for="EventName" disabled="true" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="EventLocation" class="form-label">Etkinlik Yeri:</label>
+        <input asp-for="EventLocation" disabled="true" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="EventDetails" class="form-label">Etkinlik Detayı:</label>
+        <input asp-for="EventDetails" disabled="true" class="form-control" />
+    </div>
+
+        <div class="mb-3">
+            <label asp-for="EventDetails" class="form-label">Etkinlik Detayı:</label>
+            <input asp-for="EventDetails" disabled="true" class="form-control" />
+        </div>
+
+
+
+</form>

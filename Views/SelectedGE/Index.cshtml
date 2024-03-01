@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<SelectedGuests>
+
+<h2>Etkinliklere Katılanların Listesi</h2>
+<a href="/Event/EventList" class="btn btn-primary">Geri Dön</a>
+<a href="/SelectedGE/CreateGE" class="btn btn-primary">Katlımcıya Etkinlik Ata</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width:150px">No:</th>
+            <th>Katılımcı Adı:</th>
+            <th>Etkinlik Adı:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.Guest.GuestAdSoyad)</td>
+                <td>@Html.DisplayFor(modelItem => item.Event.EventName)</td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

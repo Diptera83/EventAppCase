@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Guest
+
+<h1>Yeni Etkinlik Oluştur</h1>
+<br />
+<a href="/Guest/GuestList" class="btn btn-primary">Katılımcı Listesine Dön</a>
+<br />
+<form asp-controller="Guest" asp-action="CreateGuest" method="post">
+    <div class="mb-3">
+        <label asp-for="GuestName" class="form-label">Adı:</label>
+        <input asp-for="GuestName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="GuestSurname" class="form-label">Soyadı:</label>
+        <input asp-for="GuestSurname" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="GuestMail" class="form-label">E-Posta:</label>
+        <input asp-for="GuestMail" class="form-control" />
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Katılımcıyı Kaydet</button>
+</form>
+
